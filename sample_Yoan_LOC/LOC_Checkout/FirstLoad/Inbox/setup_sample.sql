@@ -1,0 +1,4 @@
+
+@WIZRPL(SETUP.INI[SCANNER]CltScan1=,,SQI=eStore_pos_itm_add);
+
+@DBHOT(SETUP.INI,SET,SETUP.INI[*);

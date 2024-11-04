@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+
+	<title>mStore Beta</title>
+
+	<script type="text/javascript">
+		var appServerSms = '';
+		var appServerPublic = 'https://demo.locdevops.com';
+		var appServerSmsTest = 'https://demo-s1.locdevops.com';
+		var appServerResources = '/Bitmaps/';
+		var appServerWebsocket = '';
+		var appServerLoginType = 'B2B';
+		var appServerLoginAnonymous = 2;
+		var appServerLoginPrm = 'SenchaVer=45019,LANGUAGE=EN';
+		var appServerTimeout = 20000;
+		var appSwitchAddress = '/mCom/index.html';
+		var appResizeAddress = '/eStore/index.html';
+		var appResizeWidth = 750;
+		var recaptchaSitekey = '';
+		var recaptchaClientId;
+
+		// This function is called by the Sencha Microloader after it has performed basic device detection.
+		var Ext = Ext || {};
+		Ext.beforeLoad = function (tags) {
+			var url = location.search;  // the query string (ex "?foo=1&bar")
+
+			if (appResizeAddress) {
+				if (!tags.phone && window.innerWidth>=appResizeWidth && !url.match(/\bmobile=1\b/)) {
+					window.location = appResizeAddress;
+				}
+			}
+		};
+
+		function onRecaptchaLoadCallback() {
+			if (window.recaptchaSitekey) {
+				recaptchaClientId = grecaptcha.render('recaptchaBadge', {
+					'sitekey': window.recaptchaSitekey,
+					'size': 'invisible',
+					'badge': 'bottomleft'
+				});
+			}
+		}
+	</script>
+
+	<!-- The section below is loading all needed third party JavaScript libraries -->
+	<script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=&libraries=geometry"></script>
+
+	<!-- The line below must be kept intact for Sencha Cmd to build your application -->
+	<script id="microloader" data-app="3d90397c-fc66-412e-af26-3f09a81dd360" type="text/javascript" src="bootstrap.js"></script>
+
+</head>
+
+<body><div id="recaptchaBadge"></div></body>
+</html>

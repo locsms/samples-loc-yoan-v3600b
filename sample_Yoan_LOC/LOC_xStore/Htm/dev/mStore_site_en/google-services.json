@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "377473959867",
+    "firebase_url": "https://loc-demo-xstore.firebaseio.com",
+    "project_id": "loc-demo-xstore",
+    "storage_bucket": "loc-demo-xstore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377473959867:android:7df487d232616a2b",
+        "android_client_info": {
+          "package_name": "com.locsoftware.mStore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "377473959867-b533c7k2afr9r8jqb8ttp0ok4gfno0pp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDw4810SX5eyfAMVSa78spfLEEaWT0_Ses"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "377473959867-b533c7k2afr9r8jqb8ttp0ok4gfno0pp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

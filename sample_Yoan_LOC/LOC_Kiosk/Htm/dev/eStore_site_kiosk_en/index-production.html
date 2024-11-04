@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>LOC Software - eKiosk</title>
+
+	<script type="text/javascript">
+		var appServerSms = '';
+		var appServerResources = '/Bitmaps/';
+		var appServerWebsocket = 'sms';
+		var appServerLoginType = 'B2B';
+		var appServerLoginAnonymous = 3;
+		var appServerLoginPrm = 'SenchaVer=45019,LANGUAGE=EN';
+		var appServerTimeout = 20000;
+		var appSwitchAddress = '';
+		var appResizeAddress = '';
+		var appResizeWidth = 749;
+		var recaptchaSitekey = '';
+		var appTouchEnabled = true;
+		var appKioskIdleTime = 60000;
+
+		// This function is called by the Sencha Microloader after it has performed basic device detection.
+		var Ext = Ext || {};
+		Ext.beforeLoad = function (tags) {
+			var url = location.search;  // the query string (ex "?foo=1&bar")
+
+			if (appResizeAddress) {
+				if (tags.phone || window.innerWidth<=appResizeWidth || url.match(/\bmobile=1\b/)) {
+					window.location = appResizeAddress;
+				}
+			}
+		};
+	</script>
+	<!-- The section below is loading all needed third party JavaScript libraries -->
+	<script async defer	type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDhSerfkLwDLF4SsajS0_TDJJRLDI_uTEc&libraries=geometry"></script>
+
+	<!-- The line below must be kept intact for Sencha Cmd to build your application -->
+	<script id="microloader" data-app="49631a78-872b-478a-b300-20d204bfcf0b" type="text/javascript" src="bootstrap.js"></script>
+</head>
+
+<body>
+	<div id="loading"><div id="loader"></div></div>
+</body>
+</html>

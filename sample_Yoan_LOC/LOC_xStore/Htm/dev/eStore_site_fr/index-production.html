@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="fr">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>eCommerce</title>
+
+	<script type="text/javascript">
+		var appServerSms = '';
+		var appServerPublic = 'https://demo.loccloud.net';
+		var appServerResources = '/Bitmaps/';
+		var appServerWebsocket = '';
+		var appServerLoginType = 'B2B';
+		var appServerLoginAnonymous = 2;
+		var appServerLoginPrm = 'SenchaVer=45019,LANGUAGE=FR';
+		var appServerTimeout = 20000;
+		var appSwitchAddress = '/eStore/index.html';
+		var appResizeAddress = '/mCom/index.html';
+		var appResizeWidth = 749;
+		var recaptchaSitekey = '';
+		var recaptchaClientId;
+
+		// This function is called by the Sencha Microloader after it has performed basic device detection.
+		var Ext = Ext || {};
+		Ext.beforeLoad = function (tags) {
+			var url = location.search;  // the query string (ex "?foo=1&bar")
+
+			if (appResizeAddress) {
+				if (tags.phone || window.innerWidth<=appResizeWidth || url.match(/\bmobile=1\b/)) {
+					var url = String(window.location);
+					var pos = url.indexOf('?'); if (pos==-1) pos = url.indexOf('#');
+					if (pos==-1) url = ''; else url = url.substring(pos);
+					window.location = appResizeAddress + url;
+				}
+			}
+		};
+		function onRecaptchaLoadCallback() {
+			if (window.recaptchaSitekey) {
+				recaptchaClientId = grecaptcha.render('recaptchaBadge', {
+					'sitekey': window.recaptchaSitekey,
+					'size': 'invisible',
+					'badge': 'bottomleft'
+				});
+			}
+		}
+	</script>
+
+	<!-- The section below is loading all needed third party JavaScript libraries -->
+	<script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=&libraries=geometry"></script>
+
+	<!-- The line below must be kept intact for Sencha Cmd to build your application -->
+	<script id="microloader" data-app="49631a78-872b-478a-b300-20d204bfcf0b" type="text/javascript" src="bootstrap.js"></script>
+
+</head>
+
+<body>
+	<div id="recaptchaBadge"></div>
+	<div id="loading">Chargement...un instant s'il vous plait...</div>
+</body>
+</html>

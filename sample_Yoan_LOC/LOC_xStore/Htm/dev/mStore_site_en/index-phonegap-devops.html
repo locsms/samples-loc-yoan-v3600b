@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>mStore Beta</title>
+
+	<script type="text/javascript">
+		var appServerSms = 'https://demo.locdevops.com';
+		var appServerPublic = 'https://demo.locdevops.com';
+		var appServerSmsTest = 'https://demo-s2.locdevops.com';
+		var appServerResources = 'https://demo.locdevops.com/Bitmaps/';
+		var appServerWebsocket = '';
+		var appServerLoginType = 'B2B';
+		var appServerLoginAnonymous = 2;
+		var appServerLoginPrm = 'SenchaVer=45014';
+		var appServerTimeout = 20000;
+		var recaptchaSitekey = '';
+		var appServerCertificate = null;
+		var recaptchaClientId;
+
+		document.addEventListener("deviceready", onDeviceReady, false);
+		function onDeviceReady() {
+			setTimeout(function() { navigator.splashscreen.hide(); }, 2000);
+			window.open = cordova.InAppBrowser.open;
+			if (cordova.platformId == 'android') {
+				StatusBar.styleLightContent();
+				StatusBar.backgroundColorByHexString('#000');
+			}
+			else {
+				StatusBar.styleDefault();
+			}
+		}
+
+		function onRecaptchaLoadCallback() {
+			if (window.recaptchaSitekey) {
+				recaptchaClientId = grecaptcha.render('recaptchaBadge', {
+					'sitekey': window.recaptchaSitekey,
+					'size': 'invisible',
+					'badge': 'bottomleft'
+				});
+			}
+		}
+	</script>
+
+	<!-- The section below is loading all needed third party JavaScript libraries -->
+	<script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=&libraries=geometry"></script>
+
+	<!-- The line below must be kept intact for Sencha Cmd to build your application -->
+	<script id="microloader" data-app="3d90397c-fc66-412e-af26-3f09a81dd360" type="text/javascript" src="bootstrap.js"></script>
+
+</head>
+
+<body><div id="recaptchaBadge"></div></body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "mStore Beta",
+  "version": "350.14.0",
+  "description": "mStore Beta",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://locsms@bitbucket.org/teamname/phonegap-loc-temp-mStore-v3500b.git"
+  },
+  "author": "LOC Software",
+  "license": "ISC",
+  "homepage": "https://www.locsoftware.com"
+}

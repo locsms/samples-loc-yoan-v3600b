@@ -1,0 +1,61 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Sell.Pos.Menu.Button",
+            "Sell.Pos.Offer.List",
+            "Sell.Pos.Offer.Criteria",
+            "Sell.Pos.Flip.Rpc",
+            "Sell.Pos.Gas.Lines",
+            "Sell.Pos.Coupons.List",
+            "Sell.Pos.Coupons.Link",
+            "Sell.Man.Btn.Tenders"
+        ],
+        "name": "SMS",
+        "stores": [
+            "Sell.Pos.Flip.Rpc"
+        ],
+        "views": [
+            "Sell.Pos.Host",
+            "Sell.Pos.ItmGeneralSearch",
+            "Sell.Pos.ItmGeneralResult",
+            "Sell.Pos.Panel",
+            "Sell.Pos.Menu.Button",
+            "Sell.Pos.Mod.Fastfood.Result",
+            "Sell.Pos.Mod.Fastfood.Det",
+            "Sell.Pos.Entry.Indicator",
+            "Sell.Pos.Desktop",
+            "Sell.Pos.Btn.Start",
+            "Sell.Pos.Trs.Total",
+            "Sell.Pos.Btn.Manager",
+            "Sell.Pos.Btn.Pump",
+            "Sell.Pos.Btn.Pumps",
+            "Sell.Pos.Coupons.List",
+            "Sell.Pos.Coupons.Details",
+            "Sell.Pos.Detail.Line",
+            "Sell.Pos.Detail.Total",
+            "Sell.Pos.Detail.Header",
+            "Sell.Pos.Btn.PumpsInner",
+            "Sell.Pos.Setup.Edit.Field",
+            "Sell.Pos.Trs.Receipt",
+            "Sell.Man.Btn.Tenders",
+            "Sell.Man.Entry.Quick",
+            "Sell.Man.Btn.Context",
+            "Sell.Man.Trs.Total",
+            "Sell.Man.Btn.Manager"
+        ]
+    },
+    "configAlternates": {
+        "name": "string",
+        "views": "typedarray",
+        "models": "typedarray",
+        "stores": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application"
+}

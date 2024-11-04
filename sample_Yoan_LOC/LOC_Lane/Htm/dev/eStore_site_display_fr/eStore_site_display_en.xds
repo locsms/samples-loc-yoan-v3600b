@@ -1,0 +1,60 @@
+{
+    "name": "eStore_site_display_en",
+    "settings": {
+        "cmd": {
+            "license": "",
+            "cmdVersion": "",
+            "frameworkVersion": ""
+        },
+        "urlPrefix": "http://localhost:54645/",
+        "spacesToIndent": "tab",
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "codeGenFormat": "Class",
+        "senchaIoKey": "",
+        "senchaIoPath": "/",
+        "instantiateStore": true,
+        "saveOnDeploy": false,
+        "appName": "SMS",
+        "cssPath": "",
+        "exportXDSFiles": false,
+        "buildShouldOverwriteIndex": true,
+        "projectHasEnabledWebServer": false,
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "generateArchitectVersion": true,
+        "lockUrlPrefix": false,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1833-inputEl": "a new version of the framework is available",
+        "urlPrefixTemplate": "http://localhost:{port}/{path}"
+    },
+    "xdsVersion": "4.1.1",
+    "xdsBuild": 123,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext62",
+    "viewOrderMap": {
+        "view": [],
+        "store": [
+            "493095a6-a8f5-4f9b-8a24-08a53f3f9077"
+        ],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "17506596-ee71-454c-b049-9162c7acbdeb",
+            "d86454ab-f385-4940-a14d-6f172ffaa780"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

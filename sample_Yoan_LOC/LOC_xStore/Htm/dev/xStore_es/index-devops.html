@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="es">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes">
+	<title>xTienda Beta</title>
+
+	<script type="text/javascript">
+		var appServerSms = '';
+		var appServerPublic = 'https://demo.locdevops.com';
+		var appServerResources = '/Bitmaps/';
+		var appServerWebsocket = '';
+		var appServerLoginType = 'B2B';
+		var appServerLoginAnonymous = 2;
+		var appServerLoginPrm = 'SenchaVer=45019,LANGUAGE=ES';
+		var appServerTimeout = 20000;
+		var appResizeAddress;
+		var appResizeWidth;
+		var recaptchaSitekey = '';
+		var recaptchaClientId;
+
+		// This function is called by the Sencha Microloader after it has performed basic device detection.
+		var Ext = Ext || {};
+		Ext.beforeLoad = function (tags) {
+			window.appOriginalUrl = String(window.location);
+			var url = location.search;
+
+			if (tags.phone || window.innerWidth<750 || url.match(/\bmobile=1\b/)) {
+				Ext.manifest = 'modern';
+				appResizeAddress = 'index.html';
+				appResizeWidth = 750;
+			}
+			else {
+				Ext.manifest = 'classic';
+				appResizeAddress = 'index.html?mobile=1';
+				appResizeWidth = 749;
+			}
+		};
+
+		function onRecaptchaLoadCallback() {
+			if (window.recaptchaSitekey) {
+				recaptchaClientId = grecaptcha.render('recaptchaBadge', {
+					'sitekey': window.recaptchaSitekey,
+					'size': 'invisible',
+					'badge': 'bottomleft'
+				});
+			}
+		}
+	</script>
+
+	<!-- The section below is loading all needed third party JavaScript libraries -->
+	<script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=&libraries=geometry"></script>
+
+	<!-- The line below must be kept intact for Sencha Cmd to build your application -->
+	<script id="microloader" data-app="5760f039-5b2f-47a4-8837-853811f9f536" type="text/javascript" src="bootstrap.js"></script>
+
+</head>
+
+<body>
+	<div id="recaptchaBadge"></div>
+</body>
+</html>

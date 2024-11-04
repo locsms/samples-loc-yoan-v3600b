@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget
+	id="com.locsoftware.mStore"
+	android-packageName="com.locsoftware.mStore450"
+	ios-CFBundleIdentifier="com.locsoftware.mStore"
+	version="350.14.0" 
+	android-versionCode="350140000"
+	ios-CFBundleVersion="350.14.0.0"
+	xmlns="http://www.w3.org/ns/widgets" 
+	xmlns:cdv="http://cordova.apache.org/ns/1.0">
+	<name>mStore</name>
+	<description>
+		This application is designed to work with LOC Store Management Suite only. It allows navigate items and building shopping lists on the store server.
+	</description>
+	<author email="stephan.mercier@locsoftware.com" href="http://www.locsoftware.com">
+		LOC Team
+	</author>
+	<engine name="android" spec="10.0.1" />
+	<preference name="target-device" value="universal" />
+	<preference name="exit-on-suspend" value="false" />
+	<preference name="permissions" value="none" />
+	<preference name="detect-data-types" value="true" />
+	<preference name="DisallowOverscroll" value="true" />
+	<preference name="android-targetSdkVersion" value="30" />
+	<preference name="orientation" value="portrait" />
+	<preference name="AndroidXEnabled" value="true" />
+	<preference name="GradlePluginGoogleServicesEnabled" value="true" />
+	<preference name="SplashScreenDelay" value="1000" />
+	<preference name="scheme" value="app" />
+	<preference name="hostname" value="localhost" />
+	<preference name="GradlePluginGoogleServicesVersion" value="4.3.8" />
+
+	<plugin name="cordova-plugin-statusbar" spec="2.4.3" />
+	<plugin name="cordova-plugin-camera" spec="6.0.0" />
+	<plugin name="cordova-plugin-device" spec="2.0.3" />
+	<plugin name="cordova-plugin-dialogs" spec="2.0.2" />
+	<plugin name="cordova-plugin-geolocation" spec="4.1.0" />
+	<plugin name="cordova-plugin-splashscreen" spec="6.0.0" />
+	<plugin name="cordova-plugin-vibration" spec="3.1.1" />
+	<plugin name="cordova-plugin-whitelist" spec="1.3.5" />
+	<plugin name="phonegap-plugin-barcodescanner" spec="8.1.0" />
+	<plugin name="cordova-plugin-inappbrowser" spec="5.0.0" />
+	<plugin name="cordova-plugin-fingerprint-aio" spec="4.0.2"/>
+	<plugin name="@havesource/cordova-plugin-push" spec="2.0.0" />
+	<plugin name="cordova-plugin-network-information" spec="3.0.0" />
+	<plugin name="cordova-plugin-androidx-adapter" spec="1.1.3" />
+	<plugin name="cordova-plugin-iroot" spec="0.8.1" />
+	<plugin name="cordova-plugin-sslcertificatechecker" spec="6.0.0" />
+	<plugin name="cordova-plugin-brightness" spec="0.2.0" />
+
+	<icon src="www/res/icon.png" />
+	<splash src="www/res/splash.png" />
+
+	<platform name="android">
+		<preference name="AutoHideSplashScreen" value="true" />
+		<preference name="SplashMaintainAspectRatio" value="true" />
+		<resource-file src="google-services.json" target="app/google-services.json" />
+		<icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
+		<icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
+		<icon density="hdpi" src="www/res/icon/android/drawable-hdpi-icon.png" />
+		<icon density="xhdpi" src="www/res/icon/android/drawable-xhdpi-icon.png" />
+		<icon density="xxhdpi" src="www/res/icon/android/drawable-xxhdpi-icon.png" />
+		<icon density="xxxhdpi" src="www/res/icon/android/drawable-xxxhdpi-icon.png" />
+		<splash density="land-ldpi" src="www/res/screen/android/drawable-land-ldpi-screen.png" />
+		<splash density="land-mdpi" src="www/res/screen/android/drawable-land-mdpi-screen.png" />
+		<splash density="land-hdpi" src="www/res/screen/android/drawable-land-hdpi-screen.png" />
+		<splash density="land-xhdpi" src="www/res/screen/android/drawable-land-xhdpi-screen.png" />
+		<splash density="land-xxhdpi" src="www/res/screen/android/drawable-land-xxhdpi-screen.png" />
+		<splash density="land-xxxhdpi" src="www/res/screen/android/drawable-land-xxxhdpi-screen.png" />
+		<splash density="port-ldpi" src="www/res/screen/android/drawable-port-ldpi-screen.png" />
+		<splash density="port-mdpi" src="www/res/screen/android/drawable-port-mdpi-screen.png" />
+		<splash density="port-hdpi" src="www/res/screen/android/drawable-port-hdpi-screen.png" />
+		<splash density="port-xhdpi" src="www/res/screen/android/drawable-port-xhdpi-screen.png" />
+		<splash density="port-xxhdpi" src="www/res/screen/android/drawable-port-xxhdpi-screen.png" />
+		<splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
+	</platform>
+
+	<platform name="ios">
+		<config-file parent="UIUserInterfaceStyle" target="*-Info.plist">
+			<string>Light</string>
+		</config-file>
+		<config-file parent="UIViewControllerBasedStatusBarAppearance" target="*-Info.plist">
+			<true />
+		</config-file>
+		<preference name="AutoHideSplashScreen" value="false" />
+		<preference name="UseSwiftLanguageVersion" value="5" />
+		<plugin name="cordova-plugin-add-swift-support" spec="2.0.2" />
+		<preference name="deployment-target" value="13.0.0" />
+		<edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryUsageDescription">
+			<string>This allows uploading pictures from photo library and sharing it with the store.</string>
+		</edit-config>
+		<edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
+			<string>This allows using the camera to scan barcodes to open the product details page and/or scan a customer card.</string>
+		</edit-config>
+		<edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+			<string>This allows the app to use geolocation to find stores nearby.</string>
+		</edit-config>
+		<edit-config file="*-Info.plist" mode="merge" target="NSLocationAlwaysUsageDescription">
+			<string>This allows the app to use geolocation to find stores nearby.</string>
+		</edit-config>
+		<icon height="20" src="www/res/icon/ios/icon-20.png" width="20" />
+		<icon height="48" src="www/res/icon/ios/icon-24@2x.png" width="48" />
+		<icon height="55" src="www/res/icon/ios/icon-27.5@2x.png" width="55" />
+		<icon height="88" src="www/res/icon/ios/icon-44@2x.png" width="88" />
+		<icon height="50" src="www/res/icon/ios/icon-50.png" width="50" />
+		<icon height="100" src="www/res/icon/ios/icon-50@2x.png" width="100" />
+		<icon height="60" src="www/res/icon/ios/icon-60.png" width="60" />
+		<icon height="120" src="www/res/icon/ios/icon-60@2x.png" width="120" />
+		<icon height="180" src="www/res/icon/ios/icon-60@3x.png" width="180" />
+		<icon height="76" src="www/res/icon/ios/icon-76.png" width="76" />
+		<icon height="152" src="www/res/icon/ios/icon-76@2x.png" width="152" />
+		<icon height="40" src="www/res/icon/ios/icon-40.png" width="40" />
+		<icon height="80" src="www/res/icon/ios/icon-40@2x.png" width="80" />
+		<icon height="57" src="www/res/icon/ios/icon.png" width="57" />
+		<icon height="114" src="www/res/icon/ios/icon@2x.png" width="114" />
+		<icon height="72" src="www/res/icon/ios/icon-72.png" width="72" />
+		<icon height="144" src="www/res/icon/ios/icon-72@2x.png" width="144" />
+		<icon height="167" src="www/res/icon/ios/icon-83.5@2x.png" width="167" />
+		<icon height="172" src="www/res/icon/ios/icon-86@2x.png" width="172" />
+		<icon height="196" src="www/res/icon/ios/icon-98@2x.png" width="196" />
+		<icon height="29" src="www/res/icon/ios/icon-small.png" width="29" />
+		<icon height="58" src="www/res/icon/ios/icon-small@2x.png" width="58" />
+		<icon height="87" src="www/res/icon/ios/icon-small@3x.png" width="87" />
+		<splash src="www/res/screen/ios/Default@2x~universal~anyany.png" />
+	</platform>
+
+	<access origin="*" />
+	<allow-intent href="*" />
+	<allow-navigation href="*" />
+	<content src="index.html" />
+</widget>

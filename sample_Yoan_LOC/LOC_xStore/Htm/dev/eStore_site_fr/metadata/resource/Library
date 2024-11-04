@@ -1,0 +1,24 @@
+{
+    "type": "libraryresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Library",
+        "libraryRequires": [
+            "font-awesome",
+            "google",
+            "ux"
+        ],
+        "theme": "neptune-touch"
+    },
+    "configAlternates": {
+        "basePath": "uri",
+        "designer|userClassName": "string",
+        "theme": "string",
+        "libraryRequires": "typedarray"
+    },
+    "designerId": "17506596-ee71-454c-b049-9162c7acbdeb"
+}

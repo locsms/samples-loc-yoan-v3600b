@@ -1,0 +1,59 @@
+{
+    "name": "ePos_site_en",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "6.2.1.29",
+            "frameworkVersion": "6.2.1.167"
+        },
+        "urlPrefix": "http://localhost:53106/",
+        "spacesToIndent": "tab",
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "codeGenFormat": "Class",
+        "senchaIoKey": "",
+        "senchaIoPath": "/",
+        "instantiateStore": true,
+        "saveOnDeploy": false,
+        "appName": "SMS",
+        "cssPath": "",
+        "exportXDSFiles": false,
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": false,
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1258-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1443-inputEl": "a new version of the framework is available",
+        "urlPrefixTemplate": "http://localhost:{port}/{path}"
+    },
+    "xdsVersion": "4.1.1",
+    "xdsBuild": 123,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext62",
+    "viewOrderMap": {
+        "view": [],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "0c735855-e3d5-4943-b003-741f37155f5d",
+            "69c574be-1351-435d-968e-e339d41ac88e"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

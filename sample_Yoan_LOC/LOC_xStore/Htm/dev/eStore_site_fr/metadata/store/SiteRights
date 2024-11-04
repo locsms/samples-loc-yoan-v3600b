@@ -1,0 +1,149 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "data": [
+            "[",
+            "\t{win: 'pos.desktopproduct', query:'#ExtGridSort', level:1, action: 'replace', config:'value', value:'F01'},",
+            "\t{win: 'pos.desktopproduct', query:'#sortCodeBtn', level:1, action: 'replace', config:'pressed', value:true},",
+            "\t{win: 'pos.desktopproduct', query:'#sortDescriptionBtn', level:1, action: 'replace', config:'pressed', value:false},",
+            "\t{win: 'screenviewport', query:'#posLangBtn', level:1, action: 'replace', config:'hidden', value:false}",
+            "]"
+        ],
+        "designer|userClassName": "SiteRights",
+        "model": null,
+        "storeId": "BaseRightsId"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "data": "array",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "designerId": "493095a6-a8f5-4f9b-8a24-08a53f3f9077",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "win"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField3",
+            "designerId": "7a75fa9a-77c6-4e30-b206-66a10ca352ff"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "query"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField4",
+            "designerId": "96c320e6-0294-4f2b-b5ef-372a833dc44a"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "level"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField5",
+            "designerId": "f371684e-05c0-421b-90c1-48bd9b237a08"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "action"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField6",
+            "designerId": "b9d43e69-af07-4a04-a431-24a8cad55314"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "StartLoad",
+                "implHandler": [
+                    "keyboardStart =",
+                    "\t\t\"BaseKeyMap.addBinding({key: Ext.event.Event.F4, fn: function() {ExecCtrl.entryFuncKey('FCT=710');} });\";"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "StartLoad",
+            "designerId": "8c24442d-c951-4592-a6e9-cf050fbd7b57"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "config"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField1",
+            "designerId": "313d9f54-09b0-4e95-998c-c50c7b6a2d41"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "value"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField2",
+            "designerId": "ebf34ee0-a5c9-4c81-9828-4a84351dc03f"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "name": "mStore_site_fr",
+    "settings": {
+        "cmd": {
+            "license": "",
+            "cmdVersion": "",
+            "frameworkVersion": ""
+        },
+        "urlPrefixTemplate": "http://localhost:{port}/{path}",
+        "urlPrefix": "http://localhost:58429/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "exportPath": "",
+        "spacesToIndent": "tab",
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": false,
+        "installStatus": "Not Installed"
+    },
+    "xdsVersion": "4.1.1",
+    "xdsBuild": 123,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "modern62",
+    "viewOrderMap": {
+        "view": [
+            "705c4c08-ada4-43d3-8f7a-5754e67e6343",
+            "a615b0a1-11c7-4f9b-8835-945ab1078165",
+            "e29ada7b-05b7-4b44-982f-610ef1be6000",
+            "31560bbc-b556-4b95-9968-ab7f7ae2661d",
+            "4004389b-29a5-4903-b1c7-6b7f5a61cea5",
+            "461a9d0d-5031-4c2c-acce-220e4076f288"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "fb03f6bc-417e-4858-a104-91dc86005f89"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

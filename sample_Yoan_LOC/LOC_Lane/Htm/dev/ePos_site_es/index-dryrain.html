@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="es">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=no">
+	<meta name="locsms-token-bearer" content="">
+	<title>ePos Venta</title>
+
+	<script type="text/javascript">
+		var appServerSms = '';
+		var appServerResources = '/Bitmaps/';
+		var appServerWebsocket = 'sms';
+		var appDeviceName = 'DryRain';
+		var appServerTimeout = 40000;
+		var appServerLoginPrm = 'SenchaVer=45020,LANGUAGE=ES';
+		//defaul settings: {level: ['LOG','INFO','WARN', 'ERROR'], saveLogs: true} 
+		var SMSConsoleLogs = {};
+	</script>
+
+	<script type="text/javascript" src="SMSConsoleLogs.js"></script>
+	<!-- The line below must be kept intact for Sencha Cmd to build your application -->
+	<script id="microloader" data-app="f5b8a5f6-de13-476e-8cbf-a64df5df255c" type="text/javascript" src="bootstrap.js"></script>
+
+	<!-- 
+		DryRain function to process the data scanned. 
+		Warning: not to mix with Sencha/mFloor controller 
+		device.js, the code is not egknowledged by DryRain.  
+	-->
+	<script type="text/javascript">
+        /* General use isDefined Function */
+        function isDefined(x) {
+            var undefined;
+            return x !== undefined;
+        }
+        
+
+        function DT_DecoderDataResponse(decoderData, rawDecoderData, symbologyType, dlParsedObject, deviceType, serialNumber) {
+            /* Type and error checking */
+            if (!isDefined(symbologyType)) {
+                symbologyType = 'undefined';
+            }
+
+            //Set the time for the scan code
+            var scannerBarcodeTime = new Date().getTime();
+			globalTimeScannerBarcode = scannerBarcodeTime;
+
+            /* We recommend using the "RAW" Base64 data and decoding it with the built-in "atob" function */
+            var upcCode = (atob(rawDecoderData));
+			
+			globalDataScannerBarcode = DeviceCtrl.scannerDecode(upcCode, 'stripCheckZebra', '1');
+            
+
+            if (globalDataScannerBarcode) {
+                consoleLog('DeviceCtrl.DT_DecoderDataResponse: Scan decode value =' + globalDataScannerBarcode);
+            }
+             
+
+            if (globalScannerCallback && globalDataScannerBarcode) {
+                globalScannerCallback(globalScannerForm,globalDataScannerBarcode);
+            }
+        }
+	</script>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,70 @@
+{
+    "name": "eStore_site_en",
+    "settings": {
+        "cmd": {
+            "license": "",
+            "cmdVersion": "",
+            "frameworkVersion": ""
+        },
+        "urlPrefix": "http://localhost:50564/",
+        "spacesToIndent": "tab",
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "codeGenFormat": "Class",
+        "senchaIoKey": "",
+        "senchaIoPath": "/",
+        "instantiateStore": true,
+        "saveOnDeploy": false,
+        "appName": "SMS",
+        "cssPath": "",
+        "exportXDSFiles": false,
+        "buildShouldOverwriteIndex": true,
+        "projectHasEnabledWebServer": false,
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "generateArchitectVersion": true,
+        "lockUrlPrefix": false,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1833-inputEl": "a new version of the framework is available",
+        "urlPrefixTemplate": "http://localhost:{port}/{path}"
+    },
+    "xdsVersion": "4.1.1",
+    "xdsBuild": 123,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext62",
+    "viewOrderMap": {
+        "view": [
+            "617b0da6-4545-4983-bf67-90c0d40f6db2",
+            "7932b406-eaaf-4e9a-a679-8a027e58c2dd",
+            "426b170b-9c35-48c1-a1ca-5033ebcea065",
+            "db5f87e6-9dae-487e-813a-635c18e01845",
+            "945e598b-3fbd-4940-abe3-f3f0d0bd2b57",
+            "fe6837e4-6402-453d-820b-a67ee5e40c75",
+            "b6c3972d-9f8c-44e6-b330-c5d8ee4f6aae",
+            "26498c4c-66eb-43dd-9824-51efa4371a5b",
+            "55c2e3f7-a464-48cd-9cf5-0e0dd64416bf"
+        ],
+        "store": [
+            "493095a6-a8f5-4f9b-8a24-08a53f3f9077"
+        ],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "17506596-ee71-454c-b049-9162c7acbdeb",
+            "d86454ab-f385-4940-a14d-6f172ffaa780"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

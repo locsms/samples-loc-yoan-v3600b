@@ -1,0 +1,7 @@
+{
+  "name": "mStore Beta",
+  "type": "custom",
+  "integrations": {
+    "cordova": {}
+  }
+}
